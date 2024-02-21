@@ -1,0 +1,99 @@
+{
+  "product": "Wedding Invitation",
+  "version": 0.1,
+  "releaseDate": "2024-01-23T00:00:00.000Z",
+  "demo": true,
+  "basic_information": {
+    "title": "Ashofa & Ashofi",
+    "url": "/ashofadanashofi",
+    "type_package": "A",
+    "publish": false,
+    "theme": "default"
+  },
+  "mempelai": {
+    "mempelai_1": "Ashofa",
+    "mempelai_2": "Ashofi",
+    "img_cover_undangan": "https://s.foreverr.id/images/b/2024/01/13/2acf49655e1.coverundangan.jpg",
+    "img_mempelai_1": "https://s.foreverr.id/images/b/2024/01/13/b2d2b2130e4.profilcowok.jpg",
+    "img_mempelai_2": "https://s.foreverr.id/images/b/2024/01/13/deb6f080543.profilcewek.jpg"
+  },
+  "acara": {
+    "acara_utama": {
+      "judul_acara": "Akad Nikah",
+      "alamat_acara": "Jl. Pemuda No.89, Kempil, Langenharjo, Kec. Kendal, Kab. Kendal, Jawa Tengah",
+      "map_coordinate": "-83.760097, 100.912442",
+      "nama_lokasi": "Gedung Wanita Pria",
+      "tanggal_acara": "2024-01-23T00:00:00.000Z",
+      "waktu_mulai_acara": "07:30:00",
+      "waktu_selesai_acara": "09:30:00",
+      "tampilkan_zona_waktu": true,
+      "tampilkan_acara": true,
+      "tampilkan_maps": true
+    },
+    "acara_lainnya": [
+      {
+        "id": 1,
+        "judul_acara": "Adat",
+        "alamat_acara_lain": "Jl. Pemuda No.89, Kempil, Langenharjo, Kec. Kendal, Kab. Kendal, Jawa Tengah",
+        "map_coordinate": "-83.760097, 100.912442",
+        "nama_lokasi": "Gedung Adat Indonesia",
+        "tanggal_acara": "2024-01-24T00:00:00.000Z",
+        "waktu_mulai_acara": "09:30:00",
+        "waktu_selesai_acara": "12:30:00",
+        "tampilkan_zona_waktu": true,
+        "tampilkan_acara": true,
+        "tampilkan_maps": true
+      },
+      {
+        "id": 2,
+        "judul_acara": "Adat",
+        "alamat_acara": "Jl. Pemuda No.89, Kempil, Langenharjo, Kec. Kendal, Kab. Kendal, Jawa Tengah",
+        "map_coordinate": "-83.760097, 100.912442",
+        "nama_lokasi": "Gedung Adat Indonesia",
+        "tanggal_acara": "2024-01-24T00:00:00.000Z",
+        "waktu_mulai_acara": "09:30:00",
+        "waktu_selesai_acara": "12:30:00",
+        "tampilkan_zona_waktu": true,
+        "tampilkan_acara": true,
+        "tampilkan_maps": true
+      }
+    ]
+  },
+  "widget": {
+    "music": {
+      "link": {},
+      "tampilkan": false
+    },
+    "galeri": {
+      "img": [
+        "https://s.foreverr.id/images/b/2024/01/13/b2d2b2130e4.profilcowok.jpg",
+        "https://s.foreverr.id/images/b/2024/01/13/b2d2b2130e4.profilcowok.jpg",
+        "https://s.foreverr.id/images/b/2024/01/13/b2d2b2130e4.profilcowok.jpg",
+        "https://s.foreverr.id/images/b/2024/01/13/b2d2b2130e4.profilcowok.jpg",
+        "https://s.foreverr.id/images/b/2024/01/13/b2d2b2130e4.profilcowok.jpg",
+        "https://s.foreverr.id/images/b/2024/01/13/b2d2b2130e4.profilcowok.jpg"
+      ],
+      "tampilkan": true
+    },
+    "livestream": {
+      "link": "<h3>embeded live</h3>",
+      "tampilkan": false
+    },
+    "digital_wallet": [
+      {
+        "nama_rek": "Muksin",
+        "no_rek": "23424234",
+        "bank": "BNI",
+        "qr": {},
+        "tampilkan": false
+      },
+      {
+        "nama_rek": "Muksin",
+        "no_rek": "23424234",
+        "bank": "BNI",
+        "qr": {},
+        "tampilkan": false
+      }
+    ]
+  }
+}

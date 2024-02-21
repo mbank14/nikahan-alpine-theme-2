@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cegil vs Cogil</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;500&family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/normalize.min.css">
+<!-- or -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/uno.global.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+    <script src="./data.js"></script>
+</head>
+
+<style>
+    .font-script {
+        font-family: "Sacramento", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    body{
+        font-family: sans-serif;  
+    }
+    p{
+        margin: 1rem 0 ;
+    }
+</style>
+
+<!-- <a href="https://www.freepik.com/free-vector/flower-arrangement-bouquet-isolated-clipart_25345895.htm#&position=1&from_view=author&uuid=3f95b52f-9c1c-4518-b3b2-ecbc8e38cd8a">Image by orchidart</a> on Freepik -->
+<body
+x-data="{
+    greetingOpen: true
+}"
+x-bind:class="greetingOpen ? 'm-0' : 'm-0 overflow-hidden'"
+ class="bg-rose-50 ">
+    <div
+    class=""
+        x-data="data()"
+        >
+        <!-- x-init="fetch('../data/t1/data.json').then(res => res.json()).then(data => undangan = data ); console.log(undangan)" -->
+        <div id="modalpertama"
+            x-bind:class="greetingOpen ? 'hidden' : ''"
+        >
+            <div class="bg-white fixed h-screen w-full overflow-hidden">
+                <div class="mx-8 my-9 text-center">
+                    <div class="w-full relative">
+                        <img src="./assets/bingsamp.png" class="absolute w-40 -right-10 -bottom-2">
+                        <img src="./assets/bingsamp.png" class="absolute w-40 -left-10 -top-5 rotate-180">
+
+                        <img style="width: 100%;" src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        
+                    </div>
+
+                    <!-- image icon -->
+                    <img class="h-20 mt-2" src="./assets/pemisah.png">
+                    <h3 class="text-3xl font-script my-2">Undangan kami</h3>
+                    <div class="flex flex-row justify-evenly">
+                        <p class="font-script text-4xl m-0" x-text="data.undangan?.mempelai?.mempelai_1"></p>
+                        <p class="font-script text-4xl m-0"> dan</p>
+                        <p class="font-script text-4xl m-0" x-text="data.undangan?.mempelai?.mempelai_2"></p>
+                    </div>
+                    <p class="font-script text-3xl m-0">untuk</p>
+                    <p class="text-3xl mt-5">Tamu</p>
+                    <div class="block">
+                        <a @click="greetingOpen = true">
+                            buka
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <h1 x-text="data.undangan?.product"></h1> -->
+        <div  x-bind:class="greetingOpen ? 'container' : ''">
+        
+        <div id="bride" class="mx-4 mb-20">
+            <div class="memeplai-1 relative w-full mb-15">
+                <div class="flex flex-col justify-between h-[800px]">
+                    <div class="text-center">
+                        <h3 class="text-6xl mb-1 font-script color-rose-300"
+                         x-text="data.undangan?.mempelai.mempelai_1"></h3>
+                        <p>
+                            putra dari <br />
+                            <span >Bpk Hiu</span> dan
+                            <span >Ibu Hiu</span>
+                        </p>
+                        <h3>Jakarta</h3>
+                    </div>
+
+                    <div class="relative mx-9">
+                        <img class="w-full"
+                         :src="data.undangan?.mempelai.img_mempelai_1">
+                    </div>
+                </div>
+            </div>
+            <div class="mempelai-2 relative w-full">
+                <div class="flex flex-col justify-between h-[800px]">
+                    <div class="text-center">
+                        <h3 class="text-6xl mb-1 font-script color-rose-300"
+                         x-text="data.undangan?.mempelai.mempelai_2"></h3>
+                        <p>
+                            putra dari <br />
+                            <span >Bpk Hiu</span> dan
+                            <span >Ibu Hiu</span>
+                        </p>
+                        <h3>Jakarta</h3>
+                    </div>
+
+                    <div class="relative mx-9">
+                        <img class="w-full"
+                         :src="data.undangan?.mempelai.img_mempelai_2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pembukaan" class="text-center mx-3 mb-10">
+            <div class="pt-14">
+                <p class="m-0 leading-6">Assamualaikum</p>
+                <p class="m-0 leading-6">
+                    Dengan rasa syukur kepada Tuhan, kami dengan gembira mengundang Anda untuk bergabung dalam hari bahagia kami saat kami menyatukan cinta dan hidup dalam ikatan pernikahan. Mohon hadir dan memberi berkat pada perjalanan hidup kami.
+                </p>
+            </div>
+            <div class="">
+                <!-- <p x-text="data.undangan['mempelai']['mempelai_1']"></p> -->
+                <p x-text="data.undangan?.mempelai?.mempelai_1" 
+                class="font-script text-4xl mb-0"></p>
+                <p class="m-0 font-script text-3xl">&</p>
+                <p x-text="data.undangan?.mempelai?.mempelai_2" 
+                class="font-script text-4xl mt-0"></p>
+            </div>
+        </div>
+
+        <div id="acara" class="mb-20">
+            <div class="mx-4">
+                <h3 class="font-script text-3xl text-center">Save Our Date</h3>
+                <!-- <div x-text="data.undangan['acara']['acara_lainya'][0].judul_acara"></div> -->
+                <div 
+                class="
+                    text-center bg-rose-100 radius-evenly p-3 rounded mb-10
+                ">
+                    <h3 
+                        x-text="data.undangan?.acara?.acara_utama?.judul_acara"
+                        class="text-2xl mb-15"
+                    ></h3>
+                    <p class="text-3xl font-script m-0 color-white"
+                     x-text="new Date(data.undangan?.acara?.acara_utama?.tanggal_acara).toLocaleDateString('id-ID', { day: 'numeric',month: 'long', year: 'numeric', })"></p>
+                    <div class="flex gap-2 justify-center color-white">    
+                        <p x-text="data.undangan?.acara?.acara_utama?.waktu_mulai_acara"></p>
+                        <p>s/d</p>
+                        <p x-text="data.undangan?.acara?.acara_utama?.waktu_selesai_acara"></p>
+                    </div>
+                    <p x-text="data.undangan?.acara?.acara_utama?.alamat_acara"></p>
+                    <a href="" class="p-3 bg-lime color-white decoration-none inline-block">
+                        Denah acara
+                    </a>
+                </div>
+
+                <div>
+                    <!-- <div x-text="data.undangan.acara.acara_lainnya" x-init="console.log(test)"></div> -->
+                    <template x-for="lainya in data.undangan?.acara.acara_lainnya" :key="lainya.id">    
+                        <div class="
+                            text-center bg-rose-100 radius-evenly p-3 rounded mb-10
+                        ">
+                            <h3 class="text-2xl" x-text="lainya.judul_acara"></h3>
+                            <p x-text="new Date(lainya.tanggal_acara).toLocaleDateString('id-ID', { day: 'numeric',month: 'long', year: 'numeric', })"></p>
+
+                            <div class="flex gap-2 justify-center color-white">    
+                                <p x-text="lainya.waktu_mulai_acara"></p>
+                                <p>s/d</p>
+                                <p x-text="lainya.waktu_selesai_acara"></p>
+                            </div>
+                            <p x-text="lainya.alamat_acara"></p>
+                            <a href="" class="p-3 bg-lime color-white decoration-none inline-block">
+                                Denah acara
+                            </a>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div id="galeri" class="galeri mb-20 mx-4" x-show="data.undangan?.widget?.galeri.tampilkan">
+            <h3 class="text-center mb-10">Galeri</h3>
+
+            <div class="lightbox" x-data="{lightboxOpen: false, imgSrc: ''}" x-show="lightboxOpen" x-transition
+            @lightbox.window="lightboxOpen = true; imgSrc = $event.detail;">
+                <div class="lightbox-container">
+                    <img :src="imgSrc" @click.away="lightboxOpen = false">
+                </div>
+             </div>
+
+             <div class="grid grid-cols-2 gap-2">
+                 <template 
+                 x-for="foto in data.undangan?.widget.galeri.img">
+                 <div class="relative">
+                     <!-- <div x-text="foto"></div> -->
+                     <img class="w-full" :src="foto" @click="$dispatch('lightbox', foto)">
+                    </div>
+                </template>
+            </div>
+
+            
+           
+            <style>
+                .lightbox {
+                    position: fixed;
+                    inset: 0;
+                    height: 100vh;
+                    width: 100vw;
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                .lightbox-container {
+                    height: 100vh;
+                    width: 100vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            </style>
+        </div>
+
+        <div id="livestream" x-data="{ openLive: false}" class="mb-20">
+            <div class="mx-4 text-center">
+                <h3 class="mb-10">Livestram</h3>
+                <a class="p-3 bg-rose-500 color-rose-50 rounded" @click="openLive = ! openLive">Lihat livestream</a>
+                <div class="relative"  x-show="openLive">
+                    <div x-html="data.undangan?.widget.livestream.link"></div>
+                    <!-- <video src="data.undangan.widget.livestream.link">
+                    </video> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="wallet" class="mx-4 mb-20">
+            <h3 class="text-center mb-10">Amplop digital</h3>
+            <div class="flex flex-col gap-2">
+                <template x-for="wallet in data.undangan?.widget.digital_wallet">
+                    <div class="flex flex-row justify-between bg-rose-300 py-3 px-4 rounded">
+                        <div class="flex flex-col">  
+                            <p class="mb-1"><span x-text="wallet.bank" class="font-bold"></span> | <span x-text="wallet.nama_rek"></span></p>
+                            <p class="m-0 color-lime-400" x-text="wallet.no_rek"></p>
+                        </div>
+                        <div class="flex flex-row items-center" x-data="{ copyText: 'Copy' }">
+                            <a class="inline-block" x-bind:class="copyText === 'Sukses' ? 'color-green-200': '' "
+                             @click="navigator.clipboard.writeText(wallet.no_rek), copyText = 'Sukses', setTimeout(() => copyText = 'Copy' , 1000)" x-text="copyText"></a>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    
+</body>
+</html>
